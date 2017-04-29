@@ -1,0 +1,17 @@
+{
+  "electronVersion": "1.6.6",
+  "productName": "Billoapp",
+  "appId": "se.lostisland.billoapp",
+  "files": [
+    "!**/dist",
+    "!**/tasks",
+    "!**/README.md",
+  ],
+  "mac": {
+    "icon": "src/static/billoapp.icns",
+    "target": ["zip"]
+  },
+  "publish": [
+    "provider": "github"
+  ]
+}

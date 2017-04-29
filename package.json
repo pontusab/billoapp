@@ -1,0 +1,23 @@
+{
+  "name": "Billoapp",
+  "description": "Billogram Electron App",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Pontus Abrahamsson",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron .",
+    "build": "node node_modules/.bin/build -m",
+    "release": "echo '🚀  Releasing app' && node node_modules/.bin/build -p"
+  },
+  "devDependencies": {
+    "electron": "^1.6.6",
+    "electron-builder": "^17.1.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^4.1.1"
+  }
+}

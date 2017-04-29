@@ -1,0 +1,24 @@
+body:before {
+  content: '';
+  height: 64px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  -webkit-app-region: drag;
+  pointer-events: none;
+}
+
+#body .pre-login__container {
+  margin-top: 270px;
+}
+
+#loader #loading-logo {
+  margin-top: 350px !important;
+}
+
+#body .login-only__body--register,
+#body .sfs__main__footer-push,
+#body footer {
+  display: none;
+}

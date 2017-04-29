@@ -1,0 +1,15 @@
+language: node_js
+node_js: 7
+
+cache:
+  directories:
+    - node_modules
+
+os:
+  - osx
+
+before_script:
+  - npm prune
+
+script:
+  - npm run build
