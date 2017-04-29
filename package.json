@@ -5,10 +5,24 @@
   "main": "index.js",
   "author": "Pontus Abrahamsson",
   "license": "MIT",
+  "build": {
+    "appId": "se.lostisland.billoapp",
+    "files": [
+      "!**/dist",
+      "!**/tasks",
+      "!**/README.md"
+    ],
+    "mac": {
+      "icon": "src/static/billoapp.icns",
+      "target": [
+        "zip"
+      ]
+    }
+  },
   "scripts": {
     "dev": "electron .",
     "build": "node node_modules/.bin/build -m",
-    "release": "node node_modules/.bin/build -p"
+    "release": "node node_modules/.bin/build -p always"
   },
   "devDependencies": {
     "electron": "^1.6.6",
@@ -18,6 +32,8 @@
     "eslint-plugin-import": "^2.2.0"
   },
   "dependencies": {
+    "electron-log": "^2.2.3",
+    "electron-updater": "^1.14.2",
     "electron-window-state": "^4.1.1"
   }
 }

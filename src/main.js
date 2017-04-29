@@ -3,6 +3,7 @@ const windowStateKeeper = require('electron-window-state');
 const fs = require('fs');
 
 const menu = require('./menu');
+const update = require('./update');
 
 const BILLOGRAM_URL = 'https://billogram.com/login';
 
@@ -35,4 +36,5 @@ app.on('ready', () => {
   win.webContents.on('dom-ready', () => win.webContents.insertCSS(css));
 
   menu();
+  update();
 });
