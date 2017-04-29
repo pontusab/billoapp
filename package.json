@@ -8,6 +8,7 @@
   "build": {
     "appId": "se.lostisland.billoapp",
     "files": [
+      "!**/media",
       "!**/dist",
       "!**/tasks",
       "!**/README.md"
@@ -32,8 +33,10 @@
     "eslint-plugin-import": "^2.2.0"
   },
   "dependencies": {
+    "debug": "^2.6.6",
     "electron-log": "^2.2.3",
     "electron-updater": "^1.14.2",
-    "electron-window-state": "^4.1.1"
+    "electron-window-state": "^4.1.1",
+    "ms": "^1.0.0"
   }
 }
