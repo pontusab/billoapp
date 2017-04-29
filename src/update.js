@@ -6,14 +6,12 @@ const ms = require('ms');
 autoUpdater.logger = logger;
 autoUpdater.logger.transports.file.level = 'info';
 
-// Check for updates every 5 minute
 const createInterval = () => setInterval(() => {
   logger.info('Checking for updates');
   autoUpdater.checkForUpdates();
 }, ms('5m'));
 
 function update() {
-  // at this point the app is fully started and ready for updating
   setTimeout(() => autoUpdater.checkForUpdates(), ms('5s'));
 
   let intervalId = createInterval();
@@ -26,8 +24,7 @@ function update() {
 
   autoUpdater.on('update-downloaded', () => {
     dialog.showMessageBox({
-      title: 'Install Updates',
-      message: 'Updates downloaded, application will quit for update...',
+      message: 'En ny uppdatering finns tillgänglig, starta om nu för att få den senaste versionen.',
     }, () => autoUpdater.quitAndInstall());
   });
 
