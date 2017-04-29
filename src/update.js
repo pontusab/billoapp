@@ -1,5 +1,6 @@
 const { autoUpdater } = require('electron-updater');
 const logger = require('electron-log');
+const { dialog } = require('electron');
 const ms = require('ms');
 
 autoUpdater.logger = logger;
@@ -23,13 +24,14 @@ function update() {
     intervalId = null;
   });
 
-
   autoUpdater.on('update-downloaded', () => {
-    logger.info('update-downloaded');
+    dialog.showMessageBox({
+      title: 'Install Updates',
+      message: 'Updates downloaded, application will quit for update...',
+    }, () => autoUpdater.quitAndInstall());
   });
 
   autoUpdater.on('update-not-available', () => logger.info('update-not-available'));
-
 
   autoUpdater.on('error', (err) => {
     if (intervalId === null) {
