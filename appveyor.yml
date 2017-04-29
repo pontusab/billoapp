@@ -17,4 +17,4 @@ install:
 build_script:
   - node --version
   - npm --version
-  - npm run dev
+  - npm run build

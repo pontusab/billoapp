@@ -12,4 +12,7 @@ before_script:
   - npm prune
 
 script:
-  - npm run dev
+  - npm run build
+
+notifications:
+  email: false
