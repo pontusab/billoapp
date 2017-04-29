@@ -1,7 +1,7 @@
 {
   "name": "Billoapp",
   "description": "Billogram Electron App",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "author": "Pontus Abrahamsson",
   "license": "MIT",
