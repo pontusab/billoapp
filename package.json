@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "electron .",
     "build": "node node_modules/.bin/build -m",
-    "release": "echo '🚀  Releasing app' && node node_modules/.bin/build -p"
+    "release": "node node_modules/.bin/build -p"
   },
   "devDependencies": {
     "electron": "^1.6.6",
