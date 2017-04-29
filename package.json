@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "electron .",
     "build": "node node_modules/.bin/build -m",
-    "release": "node node_modules/.bin/build -p always"
+    "release": "npm version patch  && node node_modules/.bin/build -p always"
   },
   "devDependencies": {
     "electron": "^1.6.6",
